@@ -1,0 +1,6 @@
+{
+  "name": "WhatTimeIsItRight",
+  "alias": "WhatTimeIsItRight.now.sh",
+  "type": "static",
+  "public": true
+}
