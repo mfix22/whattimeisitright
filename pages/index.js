@@ -29,6 +29,9 @@ export default class Index extends React.Component {
           <div className="hand second" />
         </div>
         {this.state.now.toLocaleTimeString()}
+        <a href="https://github.com/mfix22/whattimeisitright.now.sh/compare">
+          add a new clock
+        </a>
         <style>
           {`
             div {
@@ -92,6 +95,14 @@ export default class Index extends React.Component {
               height: 5px;
               background: red;
               transform: translateY(-50%) rotate(${(seconds / 60) * 360 + 270}deg);
+            }
+
+            a {
+              position: fixed;
+              font-size: 14px;
+              color: #111;
+              bottom: 20px;
+              right: 20px;
             }
           `}
         </style>
