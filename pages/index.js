@@ -3,10 +3,11 @@ import React from 'react'
 
 export default class Index extends React.Component {
   state = {
-    now: new Date()
+    now: null
   }
   componentDidMount() {
     const component = this
+    component.setState({ now: new Date() })
     this.interval = setInterval(() => {
       component.setState({ now: new Date() })
     }, 1000);
@@ -15,6 +16,9 @@ export default class Index extends React.Component {
     clearInterval(this.interval)
   }
   render() {
+    if (!this.state.now) {
+      return null
+    }
     const hour = this.state.now.getHours()
     const minute = this.state.now.getMinutes()
     const seconds = this.state.now.getSeconds()
