@@ -32,7 +32,8 @@ export default class Index extends React.Component {
         <style>
           {`
             div {
-              font-size: 30px;
+              font-size: 50px;
+              font-family: monospace;
             }
 
             .clock {
@@ -69,29 +70,28 @@ export default class Index extends React.Component {
               left: 50%;
               top: 50%;
               background: #111;
-              transform-origin: center left;
-              transition: all 1s linear;
+              transform-origin: left;
             }
 
             .hour {
               width: 25%;
               height: 15px;
               background: #111;
-              transform: rotate(${((hour % 12) / 12) * 360 + 270}deg);
+              transform: translateY(-50%)rotate(${((hour % 12) / 12) * 360 + 270}deg);
             }
 
             .minute {
               width: 50%;
               height: 10px;
               background: #111;
-              transform: rotate(${(minute / 60) * 360 + 270}deg);
+              transform: translateY(-50%) rotate(${(minute / 60) * 360 + 270}deg);
             }
 
             .second {
               width: 45%;
               height: 5px;
               background: red;
-              transform: rotate(${(seconds / 60) * 360 + 270}deg) ;
+              transform: translateY(-50%) rotate(${(seconds / 60) * 360 + 270}deg);
             }
           `}
         </style>
